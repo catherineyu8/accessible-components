@@ -1,0 +1,93 @@
+<table class="evenly-spaced" id="modelTable">
+	<tr>
+		<th colspan="2">original component models</th>
+	</tr>
+	<tr>
+		<td>
+			<figure>
+				<img src="./assets/models/og_models/mouse.png" />
+				<figcaption>
+					State model for mouse users of the original Save Changes
+					popup
+				</figcaption>
+			</figure>
+		</td>
+		<td>
+			<figure>
+				<img src="./assets/models/og_models/keyboard.png" />
+				<figcaption>
+					State model for keyboard users of the original Save Changes
+					popup
+				</figcaption>
+			</figure>
+		</td>
+	</tr>
+	<tr>
+		<th colspan="2">iterating over designs</th>
+	</tr>
+	<tr>
+		<td>
+			<img src="./assets/models/revised_models/mouse_iter_1.png" />
+			<p>
+				Adding an "active" state - enhances learnability - allowing new
+				(and old) users to make mistakes with their selection - their
+				first selection doesn't have to be their final choice
+			</p>
+
+			<img src="./assets/models/revised_models/mouse_iter_2.png" />
+			<p>
+				Efficiency, learnability - if a user releases the mouse off of
+				any buttons, the last selected button will stay selected. this
+				is more intuitive than always going back to a "default" state,
+				if a user realizes mid-click that they haven't decided which
+				button to choose yet.
+			</p>
+		</td>
+		<td>
+			<img src="./assets/models/revised_models/keyboard_iter_1.png" />
+
+			<p>
+				Efficiency - there is a clear distinction between a highlighted
+				versus selected button, it might take longer for everyday users
+				to navigate the popup buttons. Therefore I entirely got rid of
+				the "focused" state for keyboard users, as there is not really a
+				keyboard parallel to the mouse hover-over action.
+			</p>
+			<p>
+				Learnability and efficiency - users might not know/be used to
+				being able to change their button selection even when the enter
+				key has been pressed down (but not released yet). Something also
+				seems clunky about the fact that if the enter key is pressed -
+				ultimately one of the selected buttons WILL get pressed, and the
+				user can't undo the "press enter" action. However, I think this
+				is a fair tradeoff to make with efficiency - as every-day users
+				who use these keyboard actions a lot will not want to
+				double-click enter to actually invoke the action of pressing the
+				button.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<th colspan="2">final redesigned models</th>
+	</tr>
+	<tr>
+		<td>
+			<figure>
+				<img src="./assets/models/revised_models/mouse_final.png" />
+				<figcaption>
+					State model for mouse users of the final redesigned Save
+					Changes popup
+				</figcaption>
+			</figure>
+		</td>
+		<td>
+			<figure>
+				<img src="./assets/models/revised_models/keyboard_final.png" />
+				<figcaption>
+					State model for keyboard users of the final redesigned Save
+					Changes popup
+				</figcaption>
+			</figure>
+		</td>
+	</tr>
+</table>

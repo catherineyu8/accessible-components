@@ -1,0 +1,84 @@
+/* global styles */
+body {
+	font-family: "Trebuchet MS", sans-serif;
+	background-color: #c0e8eb;
+	padding: 120px;
+}
+
+/* typography */
+h1,
+h2,
+h3,
+p {
+	color: #1d3557;
+}
+
+h1 {
+	font-size: 64px;
+	text-align: center;
+}
+h2 {
+	font-size: 48px;
+}
+h3 {
+	font-size: 32px;
+}
+
+p,
+li {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+/* display things in columns */
+#columns {
+	display: flex; /* arrange elements in a single row (ie as columns) */
+	justify-content: space-between; /* Distributes columns evenly */
+	gap: 20px; /* Adds space between columns */
+	width: 100%; /* Ensure the container spans the full width */
+}
+.column {
+	flex: 1; /* Make both columns take equal space */
+	text-align: center; /* Center the text and images */
+	padding: 20px;
+}
+
+/* input/output table formatting */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #eefaf4;
+}
+th,
+td {
+	border: 1px solid black;
+}
+th {
+	padding: 10px;
+	background-color: #006d77;
+	font-size: 24px;
+	color: #ffffff;
+}
+#modelTable td img {
+	width: 100%; /* Makes the images span the entire width of their container */
+	height: auto; /* Maintains the aspect ratio */
+	text-align: center;
+}
+#modelTable td p { */
+    text-align: center;
+	padding: 20px;
+}
+.evenly-spaced {
+	table-layout: fixed;
+}
+
+/* links */
+a {
+	color: #007bff;
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+a:hover {
+	color: #0056b3;
+	text-decoration: underline;
+}
