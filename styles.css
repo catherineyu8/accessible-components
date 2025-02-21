@@ -18,7 +18,7 @@ h1 {
 	text-align: center;
 }
 h2 {
-	font-size: 48px;
+	font-size: 32;
 }
 h3 {
 	font-size: 32px;
@@ -34,13 +34,18 @@ li {
 #columns {
 	display: flex; /* arrange elements in a single row (ie as columns) */
 	justify-content: space-between; /* Distributes columns evenly */
-	gap: 20px; /* Adds space between columns */
+	gap: 10px; /* Adds space between columns */
 	width: 100%; /* Ensure the container spans the full width */
 }
 .column {
 	flex: 1; /* Make both columns take equal space */
 	text-align: center; /* Center the text and images */
-	padding: 20px;
+	padding: 0;
+}
+.column img {
+    width: 100%; /* Ensure images are constrained to the column width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent images from exceeding their original size */
 }
 
 /* input/output table formatting */
