@@ -11,100 +11,49 @@
 	<!-- page content goes into <body> -->
 	<body>
 		<div id="title">
-			<h1>Redesigning the Save Changes Popup Component</h1>
+			<h1>Saving Changes</h1>
 		</div>
 
-		<div id="intro">
-			<h2>But first, what is a UI component?</h2>
-			<p>
-				In user interfaces, components are distinct, reusable elements
-				that serve specific purposes. These are the building blocks of
-				any interface, and are a consistent way for designers to
-				incorporate different interactive features into their websites
-				and apps.
-			</p>
-			<p>
-				Popups are a common component used to display warnings to users.
-				A Save Changes popup component asks a user to confirm whether
-				they want to save or discard some changes they make to a
-				document. If poorly designed, these components can disrupt user
-				flow, and can even cause users to lose important changes. Not
-				only does a Save Changes popup component have to be designed to
-				be functional, but it must also be designed accessibly, such as
-				by allowing users to have multiple modes of input and output.
-				Inclusive design ensures that all users can have a positive
-				interaction with the component!
-			</p>
-		</div>
+		<p>
+			<i>
+				Redesigning the "save changes" popup component in G Cal, MS
+				Word, and VS Code to be more accessible</i
+			>
+		</p>
 
-		<div id="examples">
-			<h2>3 case studies of the Save Changes popup component</h2>
-			<div id="columns">
-				<!-- TODO: add alt text to all images -->
-				<div class="column">
-					<h3>G Cal</h3>
-					<figure>
-						<img src="./assets/example_imgs/gcal/init.png" />
-						<figcaption>Initial popup display for G Cal</figcaption>
-					</figure>
-					<figure>
-						<img src="./assets/example_imgs/gcal/cancel.png" />
-						<figcaption>
-							Popup display for G Cal after using tab key to
-							select Cancel
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="./assets/example_imgs/gcal/discard.png" />
-						<figcaption>
-							Popup display for G Cal after using tab key to
-							select Discard
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="./assets/example_imgs/gcal/mobile.jpg" />
-						<figcaption>
-							Mobile (ios) popup display for G Cal
-						</figcaption>
-					</figure>
-				</div>
-				<div class="column">
-					<h3>MS Word</h3>
-					<figure>
-						<img src="./assets/example_imgs/msword/init.png" />
-						<figcaption>
-							Initial popup display for MS Word
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="./assets/example_imgs/msword/cancel.png" />
-						<figcaption>
-							Popup display for MS Word after using VoiceOver to
-							select Cancel
-						</figcaption>
-					</figure>
-				</div>
-				<div class="column">
-					<h3>VS Code</h3>
-					<figure>
-						<img src="./assets/example_imgs/vscode/init.png" />
-						<figcaption>
-							Initial popup display for VS Code
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="./assets/example_imgs/vscode/dontsave.png" />
-						<figcaption>
-							Popup display for VS Code after using VoiceOver to
-							select Don't Save
-						</figcaption>
-					</figure>
-				</div>
+		<br />
+
+		<p>
+			UI components are reusable elements that provide designers with a
+			consistent way to incorporate interactive features into their apps.
+			When poorly designed, these components can disrupt user flow -
+			specifically for the save changes popup it can cause users to lose
+			important changes to their work.
+		</p>
+		<div id="columns">
+			<!-- TODO: add alt text to all images -->
+			<div class="column">
+				<figure>
+					<img src="./assets/example_imgs/gcal/init.png" />
+					<figcaption>G Cal</figcaption>
+				</figure>
+			</div>
+			<div class="column">
+				<figure>
+					<img src="./assets/example_imgs/msword/init.png" />
+					<figcaption>MS Word</figcaption>
+				</figure>
+			</div>
+			<div class="column">
+				<figure>
+					<img src="./assets/example_imgs/vscode/init.png" />
+					<figcaption>VS Code</figcaption>
+				</figure>
 			</div>
 		</div>
 
 		<div id="input">
-			<h2>Inputs</h2>
+			<h2>Input Analysis</h2>
 			<p>
 				Different users interact with components differently. Whether
 				they have access to different types of devices, rely on
@@ -127,60 +76,35 @@
 					);
 			</script>
 			<h3>Key observations for different inputs</h3>
-			<p>Mouse/touchpad</p>
+			<p>Mouse/Touchpad</p>
 			<ul>
 				<li>
-					Very standard for buttons to be selected on release and not
-					on press - easily memorable for users that generally use
-					computers
-				</li>
-				<li>
-					All of the popup dialog texts are selectable, but none of
-					the button texts are. Also seems standard, making it easy to
-					learn if a user has experience with other interfaces
-					following the same standard
+					Standard for buttons to be selected on release and not on
+					press
 				</li>
 			</ul>
 			<p>Keyboard</p>
 			<ul>
+				<li>Standard for escape key to correspond to "cancel"</li>
 				<li>
-					Standard for escape key to be equivalent for cancel - easily
-					memorable for users who generally use a keyboard to navigate
-					their computer, as they might come across this action a lot
+					G Cal - efficient to use tab to navigate between button
+					options
 				</li>
 				<li>
-					G Cal - efficient to be able to use tab to navigate between
-					button options
+					"Don't save" / "delete" buttons only accessible with mouse
 				</li>
 				<li>
-					MS Word and VS Code - hard for users to access "Don't save"
-					/ "Delete" tabs - if they can't use a mouse, how will they
-					ever reach these buttons?
-				</li>
-				<li>
-					For the buttons that react on key press, it might be hard
-					for users to undo these actions if they pressed the key on
-					mistake
-				</li>
-				<li>
-					Overall, G Cal seems to be the most accessible, as they all
-					have similar mouse/touchpad interaction capabilities. The
-					main benefit is that users of G Cal are always able to
-					access all of the buttons with the keyboard, while keyboard
-					users for MS Word and VS Code can only do this if they have
-					VoiceOver on.
+					Unable to undo mistaken clicks on buttons that react on key
+					press
 				</li>
 			</ul>
 		</div>
 
 		<div id="output">
-			<h2>Outputs</h2>
+			<h2>Output Analysis</h2>
 			<p>
 				Just as users provide input in many ways, they interpret outputs
-				in different ways, too. Users may rely on visual cues, screen
-				readers, haptic feedback, or other assistive technologies, and
-				it is important to design interfaces that clearly communicate a
-				component's state through multiple output modalities.
+				in different ways, too.
 			</p>
 			<div id="outputTableContainer"></div>
 			<script>
@@ -206,24 +130,22 @@
 		</div>
 
 		<div id="modelRedesign">
-			<h2>Making tradeoffs to redesign the Save Changes popup</h2>
-			<h3>(an iterative process)</h3>
-
+			<h2>Making Tradeoffs to Redesign the Save Changes popup</h2>
 			<p>
-				State models can help designers visualize how a component
-				behaves in response to different user interactions. By mapping
-				out the various states and transitions, state models allows
-				designers to understand how users navigate and interact with a
-				component. The models can also help identify accessibility gaps
-				and improve efficiency across component use.
+				I used a state model to visualize how the save changes component
+				behaves in response to different user interactions. By helping
+				to identify accessibility gaps within the component, the model
+				helps me better understand how users navigate and interact with
+				it, allowing me to redesign the component to improve its
+				efficiency.
 			</p>
 
 			<div id="columns">
 				<div class="column">
-					<h3>mouse users</h3>
+					<h3>Mouse Users</h3>
 				</div>
 				<div class="column">
-					<h3>keyboard users</h3>
+					<h3>Keyboard Users</h3>
 				</div>
 			</div>
 			<div id="modelsTableContainer"></div>
@@ -240,7 +162,7 @@
 					);
 			</script>
 
-			<h2>The final component redesign</h2>
+			<h2>Final Redesign</h2>
 			<iframe
 				style="
 					border: 1px solid rgba(0, 0, 0, 0.1);
@@ -261,81 +183,27 @@
 			<h2>Reflection</h2>
 			<!-- TODO: fill in defn here and put like an intro -->
 			<p>
-				Inclusive design shapes how users interact with interfaces,
-				ensuring accessibility and usability for diverse needs. The
-				redesigned Save Changes popup component makes additional efforts
-				to support accessibility, but some gaps may still remain.
-				However, this new design still offers improvements over the
-				original case study examples, whose input/output features impact
-				users with impairments.
+				<b>Components should be accessible to all types of users!</b> I
+				was shocked to discover that some selection options were
+				completely unreachable by certain users. I incorporated user
+				accessibility into my design by allowing all users to toggle
+				between selection choices.
 			</p>
-			<ul>
-				<li>
-					I have applied the concept of user accessibility to my
-					design by broadening the scope of users who are able to use
-					the Save Changes popup. Adding reactive outputs to keyboard
-					input allows users who prefer to or are only able to
-					interact using a keyboard to be able to navigate this
-					component, as my design allows all users to toggle between
-					button choices using their keyboard.
-				</li>
-				<li>
-					The original component designs for MS Word and VS Code did
-					not allow users to switch between button choices using their
-					keyboard - which may have been a "mismatch" (as defined by
-					Kate Holmes' in her 99U talk
-					<a href="https://www.youtube.com/watch?v=-iccWRhKZa8"
-						>Rethink What Inclusive Design Means</a
-					>
-					). In these designs, there is an absence of keyboard input
-					response, hindering keyboard users' ability to navigate with
-					the popup.
-				</li>
-				<li>
-					VoiceOver users of MS Word and VS Code are positively
-					impacted by both the input and output features of the Save
-					Changes popup redesign. The original popup responds to
-					keyboard input when VoiceOver is activated, allowing these
-					users to actually be able to navigate through the popup
-					dialogue.
-				</li>
-				<li>
-					However, non-VoiceOver keyboard users are at a disadvantage,
-					as they are only able to select the “Cancel” and “Save”
-					button options, activated by the escape and enter keys
-					respectively, and they have no visual feedback on what
-					button was selected once they exit the popup.
-				</li>
-				<li>
-					The original design may have been made by designers who were
-					accustomed to using a mouse to navigate their screens - an
-					example of ability bias.
-				</li>
-				<li>
-					Generally, I think mouse and keyboard users are most
-					commonly prioritized when designers are creating components.
-					This is because, as Holmes described in her talk, designers
-					often create in ways that match the way that they interact
-					with the components (ability bias). Given that the majority
-					of designers are probably using laptops or desktop computers
-					that have keyboards and/or mice, it would follow that most
-					of their designs are made with these user features in mind.
-					This most negatively impacts users with physical or visual
-					disabilities, who are unable to fully use a keyboard/mouse
-					setup. This could also take away from the user experience of
-					people who simply don't have access to devices with
-					keyboards and mice, such as mobile devices. It might be
-					extremely frustrating for these users to use such designs if
-					there aren't multiple ways to do an action on the interface.
-					For example, if it is necessary for a keyboard user to press
-					down multiple buttons at once in order to do something, a
-					mobile user might never be able to replicate this action if
-					their keyboard doesn't contain the same keys (such as ctrl),
-					or a user with physical disability may never be able to do
-					this action if they are physically unable to reach or press
-					multiple buttons simultaneously.
-				</li>
-			</ul>
+			<p>
+				<b>VoiceOver is good.</b> Users of MS Word and VS Code are both
+				positively impacted by the i/o features from VoiceOver, allowing
+				them to use keyboard input when VoiceOver is activated, allowing
+				these users to actually be able to navigate through the popup
+				dialogue.
+			</p>
+			<p>
+				<b>Designers should beware of ability bias.</b> People tend to
+				design in ways that match the way they interact with components.
+				The majority of designers are likely using laptops or desktop
+				computers that have keyboards and/or mice - so they should take
+				special care to ensure that their designs are accessible to
+				people using of all kinds of inputs and outputs.
+			</p>
 		</div>
 	</body>
 </html>
